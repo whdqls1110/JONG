@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\JONG\C#class\CSclass\CSclass\bin\Debug\CSclass.exe.config
+C:\Users\admin\Documents\JONG\C#class\CSclass\CSclass\bin\Debug\CSclass.exe
+C:\Users\admin\Documents\JONG\C#class\CSclass\CSclass\bin\Debug\CSclass.pdb
+C:\Users\admin\Documents\JONG\C#class\CSclass\CSclass\obj\Debug\CSclass.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\JONG\C#class\CSclass\CSclass\obj\Debug\CSclass.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\JONG\C#class\CSclass\CSclass\obj\Debug\CSclass.exe
+C:\Users\admin\Documents\JONG\C#class\CSclass\CSclass\obj\Debug\CSclass.pdb
