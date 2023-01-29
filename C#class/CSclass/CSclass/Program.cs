@@ -176,36 +176,44 @@ namespace CSclass
             //var MyName = "윤종빈";
             //var iii = 3;
             //var ffff = 3.12f;
-            int[] iii = new int[3];
+            //int[] iii = new int[3];
 
-            int[] kkk = new int[4] { 1, 2, 3, 4 };
+            //int[] kkk = new int[4] { 1, 2, 3, 4 };
 
-            string[] lang = new string[3] { "c#", "c++", "c" };
-            long[] lolo = new long[1] { 2 };
+            //string[] lang = new string[3] { "c#", "c++", "c" };
+            //long[] lolo = new long[1] { 2 };
 
-            System.Console.WriteLine(kkk[0]);
+            //System.Console.WriteLine(kkk[0]);
 
             //int형 배열 5칸짜리 5개
             //string형 배열 5칸짜리 5개
 
-            int[] inin = new int[5] { 8, 3, 6, 4, 56 };
-            string[] str = new string[5] { "str", "int", "long", "bool", "float" };
-            System.Console.WriteLine(inin[3]);
-            System.Console.WriteLine(str[2]);
+            //int[] inin = new int[5] { 8, 3, 6, 4, 56 };
+            //string[] str = new string[5] { "str", "int", "long", "bool", "float" };
+            //System.Console.WriteLine(inin[3]);
+            //System.Console.WriteLine(str[2]);
 
-            int[] LaterArray;
-            System.Console.WriteLine("배열의 크기는?");
-            string ArraySize;
-            ArraySize = System.Console.ReadLine();
-            LaterArray = new int[Convert.ToInt32(ArraySize)];
+            //int[] LaterArray;
+            //System.Console.WriteLine("배열의 크기는?");
+            //string ArraySize;
+            //ArraySize = System.Console.ReadLine();
+            //LaterArray = new int[Convert.ToInt32(ArraySize)];
 
-            string[] llang = new string[3];
-            llang[0] = "c";
-            llang[1] = "c++";
-            llang[2] = "c#";
-            System.Console.WriteLine($"0번 값은 {llang[0]}입니다.");
-            llang[0] = "나도졸려";
-            System.Console.WriteLine($"0번 값은 {llang[0]}입니다.");
+            //string[] llang = new string[3];
+            //llang[0] = "c";
+            //llang[1] = "c++";
+            //llang[2] = "c#";
+            //System.Console.WriteLine($"0번 값은 {llang[0]}입니다.");
+            //llang[0] = "나도졸려";
+            //System.Console.WriteLine($"0번 값은 {llang[0]}입니다.");
+
+            string[] food = new string[4] { "떡볶이", "김밥", "라면", "라볶이" };
+            System.Console.WriteLine($"메뉴를 골라주세요.{ food[0]},{ food[1]},{ food[2]},{ food[3]}");
+            string sel = System.Console.ReadLine();
+            int sell = Convert.ToInt32(sel);
+            System.Console.WriteLine(food[sell]);
+            food[sell] = " ";
+            System.Console.WriteLine($"메뉴를 골라주세요.{ food[0]},{ food[1]},{ food[2]},{ food[3]}");
         }
     }
 }
