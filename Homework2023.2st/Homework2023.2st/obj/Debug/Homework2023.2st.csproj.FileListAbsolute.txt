@@ -1,0 +1,7 @@
+C:\Users\jongb\source\repos\Homework2023.2st\Homework2023.2st\bin\Debug\Homework2023.2st.exe.config
+C:\Users\jongb\source\repos\Homework2023.2st\Homework2023.2st\bin\Debug\Homework2023.2st.exe
+C:\Users\jongb\source\repos\Homework2023.2st\Homework2023.2st\bin\Debug\Homework2023.2st.pdb
+C:\Users\jongb\source\repos\Homework2023.2st\Homework2023.2st\obj\Debug\Homework2023.2st.csproj.AssemblyReference.cache
+C:\Users\jongb\source\repos\Homework2023.2st\Homework2023.2st\obj\Debug\Homework2023.2st.csproj.CoreCompileInputs.cache
+C:\Users\jongb\source\repos\Homework2023.2st\Homework2023.2st\obj\Debug\Homework2023.2st.exe
+C:\Users\jongb\source\repos\Homework2023.2st\Homework2023.2st\obj\Debug\Homework2023.2st.pdb
