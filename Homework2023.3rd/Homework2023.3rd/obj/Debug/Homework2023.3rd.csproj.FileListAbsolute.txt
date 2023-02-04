@@ -1,0 +1,7 @@
+C:\Users\jongb\OneDrive\문서\JONG\Homework2023.3rd\Homework2023.3rd\bin\Debug\Homework2023.3rd.exe.config
+C:\Users\jongb\OneDrive\문서\JONG\Homework2023.3rd\Homework2023.3rd\bin\Debug\Homework2023.3rd.exe
+C:\Users\jongb\OneDrive\문서\JONG\Homework2023.3rd\Homework2023.3rd\bin\Debug\Homework2023.3rd.pdb
+C:\Users\jongb\OneDrive\문서\JONG\Homework2023.3rd\Homework2023.3rd\obj\Debug\Homework2023.3rd.csproj.AssemblyReference.cache
+C:\Users\jongb\OneDrive\문서\JONG\Homework2023.3rd\Homework2023.3rd\obj\Debug\Homework2023.3rd.csproj.CoreCompileInputs.cache
+C:\Users\jongb\OneDrive\문서\JONG\Homework2023.3rd\Homework2023.3rd\obj\Debug\Homework2023.3rd.exe
+C:\Users\jongb\OneDrive\문서\JONG\Homework2023.3rd\Homework2023.3rd\obj\Debug\Homework2023.3rd.pdb
