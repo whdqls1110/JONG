@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\JONG\20230205class\20230205class\bin\Debug\20230205class.exe.config
+C:\Users\admin\Documents\JONG\20230205class\20230205class\bin\Debug\20230205class.exe
+C:\Users\admin\Documents\JONG\20230205class\20230205class\bin\Debug\20230205class.pdb
+C:\Users\admin\Documents\JONG\20230205class\20230205class\obj\Debug\20230205class.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\JONG\20230205class\20230205class\obj\Debug\20230205class.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\JONG\20230205class\20230205class\obj\Debug\20230205class.exe
+C:\Users\admin\Documents\JONG\20230205class\20230205class\obj\Debug\20230205class.pdb
