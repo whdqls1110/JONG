@@ -274,132 +274,143 @@ namespace _20230205_2cd
             //Console.WriteLine("끝");
 
             //메소드
-            int newInt = ShowNewSentence(5);
-            int puls = Plus(5);
-            int ma = Ma(5);
-            int mul = Mul(5);
-            int na = Na(5);
-            System.Console.WriteLine(puls);
-            System.Console.WriteLine(ma);
-            System.Console.WriteLine(mul);
-            System.Console.WriteLine(na);
+            //int newInt = ShowNewSentence(5);
+            //int puls = Plus(5);
+            //int ma = Ma(5);
+            //int mul = Mul(5);
+            //int na = Na(5);
+            //System.Console.WriteLine(puls);
+            //System.Console.WriteLine(ma);
+            //System.Console.WriteLine(mul);
+            //System.Console.WriteLine(na);
 
-            System.Console.WriteLine("숫자를 입력하세요.");
-            string num = System.Console.ReadLine();
-            int numm = Convert.ToInt32(num);
-            int ss = SS(numm);
-            if (ss == 0)
-            {
-                System.Console.WriteLine("입력한 숫자는 짝수 입니다.");
-            }
-            else
-            {
-                System.Console.WriteLine("입력한 숫자는 홀수 입니다.");
-            }
+            //System.Console.WriteLine("숫자를 입력하세요.");
+            //string num = System.Console.ReadLine();
+            //int numm = Convert.ToInt32(num);
+            //int ss = SS(numm);
+            //if (ss == 0)
+            //{
+            //    System.Console.WriteLine("입력한 숫자는 짝수 입니다.");
+            //}
+            //else
+            //{
+            //    System.Console.WriteLine("입력한 숫자는 홀수 입니다.");
+            //}
 
-            string s3 = System.Console.ReadLine();
-            if (s3 == "+")
-            {
-                System.Console.WriteLine("숫자 두개를 입력해 주세요.");
-                string s1 = System.Console.ReadLine();
-                int s1N = Convert.ToInt32(s1);
-                string s2 = System.Console.ReadLine();
-                int s2N = Convert.ToInt32(s2);
+            //string s3 = System.Console.ReadLine();
+            //if (s3 == "+")
+            //{
+            //    System.Console.WriteLine("숫자 두개를 입력해 주세요.");
+            //    string s1 = System.Console.ReadLine();
+            //    int s1N = Convert.ToInt32(s1);
+            //    string s2 = System.Console.ReadLine();
+            //    int s2N = Convert.ToInt32(s2);
 
-                int newInt1 = PlusTwoParam(s1N, s2N);
-                System.Console.WriteLine(newInt1);
-            }
-            else if (s3 == "-")
-            {
-                System.Console.WriteLine("숫자 두개를 입력해 주세요.");
-                string s1 = System.Console.ReadLine();
-                int s1N = Convert.ToInt32(s1);
-                string s2 = System.Console.ReadLine();
-                int s2N = Convert.ToInt32(s2);
+            //    int newInt1 = PlusTwoParam(s1N, s2N);
+            //    System.Console.WriteLine(newInt1);
+            //}
+            //else if (s3 == "-")
+            //{
+            //    System.Console.WriteLine("숫자 두개를 입력해 주세요.");
+            //    string s1 = System.Console.ReadLine();
+            //    int s1N = Convert.ToInt32(s1);
+            //    string s2 = System.Console.ReadLine();
+            //    int s2N = Convert.ToInt32(s2);
 
-                int newInt1 = MaTwoParam(s1N, s2N);
-                System.Console.WriteLine(newInt1);
-            }
-            else if (s3 == "*")
-            {
-                System.Console.WriteLine("숫자 두개를 입력해 주세요.");
-                string s1 = System.Console.ReadLine();
-                int s1N = Convert.ToInt32(s1);
-                string s2 = System.Console.ReadLine();
-                int s2N = Convert.ToInt32(s2);
+            //    int newInt1 = MaTwoParam(s1N, s2N);
+            //    System.Console.WriteLine(newInt1);
+            //}
+            //else if (s3 == "*")
+            //{
+            //    System.Console.WriteLine("숫자 두개를 입력해 주세요.");
+            //    string s1 = System.Console.ReadLine();
+            //    int s1N = Convert.ToInt32(s1);
+            //    string s2 = System.Console.ReadLine();
+            //    int s2N = Convert.ToInt32(s2);
 
-                int newInt1 = MulTwoParam(s1N, s2N);
-                System.Console.WriteLine(newInt1);
-            }
-            else if (s3 == "/")
-            {
-                System.Console.WriteLine("숫자 두개를 입력해 주세요.");
-                string s1 = System.Console.ReadLine();
-                int s1N = Convert.ToInt32(s1);
-                string s2 = System.Console.ReadLine();
-                int s2N = Convert.ToInt32(s2);
+            //    int newInt1 = MulTwoParam(s1N, s2N);
+            //    System.Console.WriteLine(newInt1);
+            //}
+            //else if (s3 == "/")
+            //{
+            //    System.Console.WriteLine("숫자 두개를 입력해 주세요.");
+            //    string s1 = System.Console.ReadLine();
+            //    int s1N = Convert.ToInt32(s1);
+            //    string s2 = System.Console.ReadLine();
+            //    int s2N = Convert.ToInt32(s2);
 
-                int newInt1 = NaTwoParam(s1N, s2N);
-                System.Console.WriteLine(newInt1);
-            }
-            else
+            //    int newInt1 = NaTwoParam(s1N, s2N);
+            //    System.Console.WriteLine(newInt1);
+            //}
+            //else
+            //{
+            //    System.Console.WriteLine("기호를 잘못 입력하였습니다.");
+            //}
+            System.Console.WriteLine("반복할 횟수를 입력하세요");
+            string s4 = System.Console.ReadLine();
+            int S4 = Convert.ToInt32(s4);
+            SSSS(S4);
+        }
+        private static void SSSS(int number)
+        {
+            for(int i = 0; i < number; i++)
             {
-                System.Console.WriteLine("기호를 잘못 입력하였습니다.");
+                System.Console.WriteLine(i+1+" 문장");
             }
         }
-        private static int NaTwoParam(int number1, int number2)
-        {
-            int resultNumber = number1 / number2;
-            return resultNumber;
-        }
-        private static int MulTwoParam(int number1, int number2)
-        {
-            int resultNumber = number1 * number2;
-            return resultNumber;
-        }
-        private static int PlusTwoParam(int number1,int number2)
-        {
-            int resultNumber = number1 + number2;
-            return resultNumber;
-        }
-        private static int MaTwoParam(int number1, int number2)
-        {
-            int resultNumber = number1 - number2;
-            return resultNumber;
-        }
-        private static int SS(int number)
-        {
-            int newnumber = number % 2;
-            return newnumber;
-        }
-        private static int ShowNewSentence(int number)
-        {
-            int newnumber = number + 5;
-            System.Console.WriteLine(newnumber);
-            int newnumber2 = number * 5;
-            System.Console.WriteLine(newnumber2);
-            return newnumber2;
-        }
-        private static int Plus(int number)
-        {
-            int newnumber = number + 3;
-            return newnumber;
-        }
-        private static int Ma(int number)
-        {
-            int newnumber = number - 3;
-            return newnumber;
-        }
-        private static int Mul(int number)
-        {
-            int newnumber = number * 3;
-            return newnumber;
-        }
-        private static int Na(int number)
-        {
-            int newnumber = number / 3;
-            return newnumber;
-        }
+        //private static int NaTwoParam(int number1, int number2)
+        //{
+        //    int resultNumber = number1 / number2;
+        //    return resultNumber;
+        //}
+        //private static int MulTwoParam(int number1, int number2)
+        //{
+        //    int resultNumber = number1 * number2;
+        //    return resultNumber;
+        //}
+        //private static int PlusTwoParam(int number1,int number2)
+        //{
+        //    int resultNumber = number1 + number2;
+        //    return resultNumber;
+        //}
+        //private static int MaTwoParam(int number1, int number2)
+        //{
+        //    int resultNumber = number1 - number2;
+        //    return resultNumber;
+        //}
+        //private static int SS(int number)
+        //{
+        //    int newnumber = number % 2;
+        //    return newnumber;
+        //}
+        //private static int ShowNewSentence(int number)
+        //{
+        //    int newnumber = number + 5;
+        //    System.Console.WriteLine(newnumber);
+        //    int newnumber2 = number * 5;
+        //    System.Console.WriteLine(newnumber2);
+        //    return newnumber2;
+        //}
+        //private static int Plus(int number)
+        //{
+        //    int newnumber = number + 3;
+        //    return newnumber;
+        //}
+        //private static int Ma(int number)
+        //{
+        //    int newnumber = number - 3;
+        //    return newnumber;
+        //}
+        //private static int Mul(int number)
+        //{
+        //    int newnumber = number * 3;
+        //    return newnumber;
+        //}
+        //private static int Na(int number)
+        //{
+        //    int newnumber = number / 3;
+        //    return newnumber;
+        //}
 
     }
 }
