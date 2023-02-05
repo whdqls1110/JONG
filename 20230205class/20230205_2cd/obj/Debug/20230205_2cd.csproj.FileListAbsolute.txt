@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\JONG\20230205class\20230205_2cd\bin\Debug\20230205_2cd.exe.config
+C:\Users\admin\Documents\JONG\20230205class\20230205_2cd\bin\Debug\20230205_2cd.exe
+C:\Users\admin\Documents\JONG\20230205class\20230205_2cd\bin\Debug\20230205_2cd.pdb
+C:\Users\admin\Documents\JONG\20230205class\20230205_2cd\obj\Debug\20230205_2cd.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\JONG\20230205class\20230205_2cd\obj\Debug\20230205_2cd.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\JONG\20230205class\20230205_2cd\obj\Debug\20230205_2cd.exe
+C:\Users\admin\Documents\JONG\20230205class\20230205_2cd\obj\Debug\20230205_2cd.pdb
