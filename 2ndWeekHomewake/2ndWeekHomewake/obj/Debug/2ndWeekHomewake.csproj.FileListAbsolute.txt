@@ -1,0 +1,7 @@
+C:\Users\jongb\OneDrive\문서\JONG\2ndWeekHomewake\2ndWeekHomewake\bin\Debug\2ndWeekHomewake.exe.config
+C:\Users\jongb\OneDrive\문서\JONG\2ndWeekHomewake\2ndWeekHomewake\bin\Debug\2ndWeekHomewake.exe
+C:\Users\jongb\OneDrive\문서\JONG\2ndWeekHomewake\2ndWeekHomewake\bin\Debug\2ndWeekHomewake.pdb
+C:\Users\jongb\OneDrive\문서\JONG\2ndWeekHomewake\2ndWeekHomewake\obj\Debug\2ndWeekHomewake.csproj.AssemblyReference.cache
+C:\Users\jongb\OneDrive\문서\JONG\2ndWeekHomewake\2ndWeekHomewake\obj\Debug\2ndWeekHomewake.csproj.CoreCompileInputs.cache
+C:\Users\jongb\OneDrive\문서\JONG\2ndWeekHomewake\2ndWeekHomewake\obj\Debug\2ndWeekHomewake.exe
+C:\Users\jongb\OneDrive\문서\JONG\2ndWeekHomewake\2ndWeekHomewake\obj\Debug\2ndWeekHomewake.pdb
