@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\JONG\3week\3week\obj\Debug\3week.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\JONG\3week\3week\obj\Debug\3week.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\JONG\3week\3week\bin\Debug\3week.exe.config
+C:\Users\admin\Documents\JONG\3week\3week\bin\Debug\3week.exe
+C:\Users\admin\Documents\JONG\3week\3week\bin\Debug\3week.pdb
+C:\Users\admin\Documents\JONG\3week\3week\obj\Debug\3week.exe
+C:\Users\admin\Documents\JONG\3week\3week\obj\Debug\3week.pdb
