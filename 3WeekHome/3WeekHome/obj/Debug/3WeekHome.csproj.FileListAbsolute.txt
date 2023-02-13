@@ -1,0 +1,7 @@
+C:\Users\jongb\OneDrive\문서\JONG\3WeekHome\3WeekHome\bin\Debug\3WeekHome.exe.config
+C:\Users\jongb\OneDrive\문서\JONG\3WeekHome\3WeekHome\bin\Debug\3WeekHome.exe
+C:\Users\jongb\OneDrive\문서\JONG\3WeekHome\3WeekHome\bin\Debug\3WeekHome.pdb
+C:\Users\jongb\OneDrive\문서\JONG\3WeekHome\3WeekHome\obj\Debug\3WeekHome.csproj.AssemblyReference.cache
+C:\Users\jongb\OneDrive\문서\JONG\3WeekHome\3WeekHome\obj\Debug\3WeekHome.csproj.CoreCompileInputs.cache
+C:\Users\jongb\OneDrive\문서\JONG\3WeekHome\3WeekHome\obj\Debug\3WeekHome.exe
+C:\Users\jongb\OneDrive\문서\JONG\3WeekHome\3WeekHome\obj\Debug\3WeekHome.pdb
