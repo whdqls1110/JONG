@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\JONG\4weeks\4weeks\bin\Debug\4weeks.exe.config
+C:\Users\admin\Documents\JONG\4weeks\4weeks\bin\Debug\4weeks.exe
+C:\Users\admin\Documents\JONG\4weeks\4weeks\bin\Debug\4weeks.pdb
+C:\Users\admin\Documents\JONG\4weeks\4weeks\obj\Debug\4weeks.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\JONG\4weeks\4weeks\obj\Debug\4weeks.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\JONG\4weeks\4weeks\obj\Debug\4weeks.exe
+C:\Users\admin\Documents\JONG\4weeks\4weeks\obj\Debug\4weeks.pdb
