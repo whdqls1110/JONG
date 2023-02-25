@@ -5,3 +5,10 @@ C:\Users\admin\Documents\JONG\4weeks\4weeks\obj\Debug\4weeks.csproj.AssemblyRefe
 C:\Users\admin\Documents\JONG\4weeks\4weeks\obj\Debug\4weeks.csproj.CoreCompileInputs.cache
 C:\Users\admin\Documents\JONG\4weeks\4weeks\obj\Debug\4weeks.exe
 C:\Users\admin\Documents\JONG\4weeks\4weeks\obj\Debug\4weeks.pdb
+C:\Users\jongb\OneDrive\문서\JONG\4weeks\4weeks\bin\Debug\4weeks.exe.config
+C:\Users\jongb\OneDrive\문서\JONG\4weeks\4weeks\bin\Debug\4weeks.exe
+C:\Users\jongb\OneDrive\문서\JONG\4weeks\4weeks\bin\Debug\4weeks.pdb
+C:\Users\jongb\OneDrive\문서\JONG\4weeks\4weeks\obj\Debug\4weeks.csproj.AssemblyReference.cache
+C:\Users\jongb\OneDrive\문서\JONG\4weeks\4weeks\obj\Debug\4weeks.csproj.CoreCompileInputs.cache
+C:\Users\jongb\OneDrive\문서\JONG\4weeks\4weeks\obj\Debug\4weeks.exe
+C:\Users\jongb\OneDrive\문서\JONG\4weeks\4weeks\obj\Debug\4weeks.pdb
