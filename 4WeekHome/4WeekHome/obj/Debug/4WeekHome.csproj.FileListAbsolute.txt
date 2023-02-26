@@ -5,3 +5,10 @@ C:\Users\jongb\OneDrive\문서\JONG\4WeekHome\4WeekHome\obj\Debug\4WeekHome.cspr
 C:\Users\jongb\OneDrive\문서\JONG\4WeekHome\4WeekHome\obj\Debug\4WeekHome.csproj.CoreCompileInputs.cache
 C:\Users\jongb\OneDrive\문서\JONG\4WeekHome\4WeekHome\obj\Debug\4WeekHome.exe
 C:\Users\jongb\OneDrive\문서\JONG\4WeekHome\4WeekHome\obj\Debug\4WeekHome.pdb
+C:\Users\admin\Documents\JONG\4WeekHome\4WeekHome\bin\Debug\4WeekHome.exe.config
+C:\Users\admin\Documents\JONG\4WeekHome\4WeekHome\bin\Debug\4WeekHome.exe
+C:\Users\admin\Documents\JONG\4WeekHome\4WeekHome\bin\Debug\4WeekHome.pdb
+C:\Users\admin\Documents\JONG\4WeekHome\4WeekHome\obj\Debug\4WeekHome.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\JONG\4WeekHome\4WeekHome\obj\Debug\4WeekHome.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\JONG\4WeekHome\4WeekHome\obj\Debug\4WeekHome.exe
+C:\Users\admin\Documents\JONG\4WeekHome\4WeekHome\obj\Debug\4WeekHome.pdb
