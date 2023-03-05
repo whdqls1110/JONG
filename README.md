@@ -24,10 +24,10 @@
         while : 무한반복을 구현해야하는 경우에 주로 사용하였다.
         switch : 방향키나 엔터 스패이스 바 를 통한 조작을 위해 사용하였다.
         break : 무한반복에서 나가거나 switch문에서 주로 사용하였다.
-        ![주석 2023-03-05 173256](https://user-images.githubusercontent.com/52520599/222950291-44435c2c-c631-4940-94e6-75af5abfe48d.jpg)
+![주석 2023-03-05 173256](https://user-images.githubusercontent.com/52520599/222950291-44435c2c-c631-4940-94e6-75af5abfe48d.jpg)
         Contains : 바닥에 놓인 카드에 지정된 문장이 포함되어 있으면 지정한 문장을 code에 저장하여 code를 통해 사용할 수 있는 카드를
                    구분할 수 있도록 하였다.
-                   ![주석 2023-03-05 173703](https://user-images.githubusercontent.com/52520599/222950464-34ad08b1-9d38-4ab7-86c3-57b33b1f28fc.jpg)
+![주석 2023-03-05 173703](https://user-images.githubusercontent.com/52520599/222950464-34ad08b1-9d38-4ab7-86c3-57b33b1f28fc.jpg)
         Dictionary : 카드를 모두 저장하고 카드 이름을 통해 해당하는 숫자를 출력하도록 하였다.
                      출력된 숫자를 13으로 나눈 나머지값에 따라 codNum에 계산된 혹은 지정된 숫자가 저장되도록 하였다.
                      codNum을 통해 사용할 수 있는 카를들 구분하도록 제작하였다.
