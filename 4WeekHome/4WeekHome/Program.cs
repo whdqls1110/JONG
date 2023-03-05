@@ -23,9 +23,10 @@ namespace _4WeekHome
         public static bool canUse = true;
         public static bool game = true;
         public static int gameover = 0;
+        public static string[] list77 = { "heart","clover","diamond","spade"};
 
-        private static string[] not2 = { "♥1", "♣1", "♦1", "♠1", "☆", "★" };
-        private static string[] not3 = { "♠1", "★", "★" };
+        private static string[] not2 = { "heart1", "clover1", "diamond1", "spade1", "blackjoker", "joker" };
+        private static string[] not3 = { "spade1", "blackjoker", "joker" };
 
         public static int c = 0;
         #endregion
@@ -157,6 +158,7 @@ namespace _4WeekHome
             Random random = new Random();
             Trun = Trun.OrderBy(x => random.Next()).ToArray();
             #endregion
+            player.ShowMyHand(c);
             while (game)
             {
                 if (Trun[trun] == 0)//플래이어 턴
@@ -167,18 +169,16 @@ namespace _4WeekHome
                         {
                             break;//게임 종료
                         }
-                        Console.WriteLine("");
-                        Console.WriteLine("Player의 턴");
-                        Console.WriteLine($"Attackcount : {attackcount}");
-                        Console.WriteLine($"바닥의 카드 = 문양:{code} 번호:{codNum}");
-                        Console.Write($"손의 카드 : ");
+                        Console.SetCursorPosition(66, 10);
+                        Console.WriteLine("   Player의 턴   ");
+                        Console.SetCursorPosition(66, 11);
+                        Console.WriteLine($"Attackcount : {attackcount}          ");
                         Console.WriteLine();
                         if (attackcount > 1)
                         {
                             c = 0;
                             do
                             {
-                                Console.WriteLine("사용할 카드를 정해주세요.");
                                 player.ShowMyHand(c);
                                 ConsoleKeyInfo key;
                                 do
@@ -206,18 +206,18 @@ namespace _4WeekHome
                                         c = 0;
                                     }
                                     player.ShowMyHand(c);
-                                } while (key.Key != ConsoleKey.Enter || key.Key != ConsoleKey.Spacebar);
+                                } while (key.Key != ConsoleKey.Enter && key.Key != ConsoleKey.Spacebar);
                                 if (codNum == 2 && AttackCard.Contains(player.HandList[c]))
                                 {
                                     canUse = true;
                                     break;
                                 }
-                                else if (codNum == 1 && code != "♠" && not2.Contains(player.HandList[c]))
+                                else if (codNum == 1 && code != "spade" && not2.Contains(player.HandList[c]))
                                 {
                                     canUse = true;
                                     break;
                                 }
-                                else if ((codNum == 1 || GroundList[0] == "☆") && not3.Contains(player.HandList[c]))
+                                else if ((codNum == 1 || GroundList[0] == "blackjoker") && not3.Contains(player.HandList[c]))
                                 {
                                     canUse = true;
                                     break;
@@ -225,6 +225,8 @@ namespace _4WeekHome
                                 if (key.Key == ConsoleKey.Spacebar)
                                 {
                                     player.GetCard(attackcount);
+                                    c = 0;
+                                    player.ShowMyHand(c);
                                     canUse = false;
                                     break;
                                 }
@@ -236,6 +238,8 @@ namespace _4WeekHome
                             if(canUse)
                             {
                                 player.UseCard(c);
+                                c = 0;
+                                player.ShowMyHand(c);
                                 if (game == false)
                                 {
                                     break;//게임 종료
@@ -247,7 +251,6 @@ namespace _4WeekHome
                             c = 0;
                             do
                             {
-                                Console.WriteLine("사용할 카드를 정해주세요.");
                                 player.ShowMyHand(c);
                                 ConsoleKeyInfo key;
                                 do
@@ -275,13 +278,13 @@ namespace _4WeekHome
                                         c = 0;
                                     }
                                     player.ShowMyHand(c);
-                                } while (key.Key != ConsoleKey.Enter || key.Key !=ConsoleKey.Spacebar);
-                                if (player.HandList[c] == "☆" || player.HandList[c] == "★")
+                                } while (key.Key != ConsoleKey.Enter && key.Key !=ConsoleKey.Spacebar);
+                                if (player.HandList[c] == "blackjoker" || player.HandList[c] == "joker")
                                 {
                                     canUse = true;
                                     break;
                                 }
-                                if (code == "★")
+                                if (code == "joker")
                                 {
                                     canUse = true;
                                     break;
@@ -289,6 +292,8 @@ namespace _4WeekHome
                                 if(key.Key == ConsoleKey.Spacebar)
                                 {
                                     player.GetCard(attackcount);
+                                    c = 0;
+                                    player.ShowMyHand(c);
                                     canUse = false;
                                     break;
                                 }
@@ -300,33 +305,62 @@ namespace _4WeekHome
                             if (canUse)
                             {
                                 player.UseCard(c);
+                                c = 0;
+                                player.ShowMyHand(c);
                                 if (game == false)
                                 {
                                     break;//게임 종료
                                 }
                                 if (codNum == 7)
                                 {
-                                    int i7 = -1;
+                                    c = 0;
+                                    ConsoleKeyInfo console1;
+                                    Console.SetCursorPosition(66, 36);
+                                    Console.Write("[heart] clover diamond spade    ");
                                     do
                                     {
-                                        Console.WriteLine("변경할 문양을 선택하세요.0:♥ 1:♣ 2:♦ 3:♠");
-                                        i7 = Convert.ToInt32(Console.ReadLine());
-                                        switch (i7)
+                                        console1 = Console.ReadKey();
+                                        switch (console1.Key)
                                         {
-                                            case 0:
-                                                code = "♥";
+                                            case ConsoleKey.LeftArrow:
+                                                c--;
+                                                if (c == -1)
+                                                {
+                                                    c = 3;
+                                                }
                                                 break;
-                                            case 1:
-                                                code = "♣";
+                                            case ConsoleKey.RightArrow:
+                                                c++;
+                                                if (c == 4)
+                                                {
+                                                    c = 0;
+                                                }
                                                 break;
-                                            case 2:
-                                                code = "♦";
-                                                break;
-                                            case 3:
-                                                code = "♠";
+                                            case ConsoleKey.Enter:
                                                 break;
                                         }
-                                    } while (i7 < 0 || i7 > 3);
+                                        Console.SetCursorPosition(66, 36);
+                                        switch (c)
+                                        {
+                                            case 0:
+                                                Console.Write("[heart] clover diamond spade    ");
+                                                break;
+                                            case 1:
+                                                Console.Write("heart [clover] diamond spade    ");
+                                                break;
+                                            case 2:
+                                                Console.Write("heart clover [diamond] spade    ");
+                                                break;
+                                            case 3:
+                                                Console.Write("heart clover diamond [spade]    ");
+                                                break;
+                                        }
+                                    } while (console1.Key != ConsoleKey.Enter);
+                                    code = list77[c];
+                                    Console.SetCursorPosition(36, 17);
+                                    Console.WriteLine($"  | {code} | | {codNum} |     ");
+                                    Console.SetCursorPosition(66, 36);
+                                    Console.Write("                                       ");
                                 }
                             }
                         }
@@ -343,8 +377,8 @@ namespace _4WeekHome
                         {
                             break;//게임 종료
                         }
-                        Console.WriteLine("");
-                        Console.WriteLine("Com1의 턴");
+                        Console.SetCursorPosition(66, 10);
+                        Console.WriteLine("   Com1의 턴   ");
                     }
                     ComAI(com1);
                     if (game == false)
@@ -365,8 +399,8 @@ namespace _4WeekHome
                         {
                             break;//게임 종료
                         }
-                        Console.WriteLine("");
-                        Console.WriteLine("Com2의 턴");
+                        Console.SetCursorPosition(66, 10);
+                        Console.WriteLine("   Com2의 턴   ");
                     }
                     ComAI(com2);
                     if (game == false)
@@ -387,8 +421,8 @@ namespace _4WeekHome
                         {
                             break;//게임 종료
                         }
-                        Console.WriteLine("");
-                        Console.WriteLine("Com3의 턴");
+                        Console.SetCursorPosition(66, 10);
+                        Console.WriteLine("   Com3의 턴   ");
                     }
                     ComAI(com3);
                     if (game == false)
@@ -403,6 +437,7 @@ namespace _4WeekHome
                 }
             }
             //player 0 com1 1 com2 2 com3 3
+            Console.Clear();
             switch (Trun[trun])
             {
                 case 0:
@@ -418,14 +453,36 @@ namespace _4WeekHome
                     Console.WriteLine("Com3 Win!!!");
                     break;
             }
+            Console.WriteLine("다시 시작하겠습니까? y/n");
+            string rs;
+            while (true)
+            {
+                rs = Console.ReadLine();
+                if (rs == "y" || rs == "n")
+                {
+                    break;
+                }
+            }
+            if (rs == "y")
+            {
+                Console.Clear();
+                Cardlist.Clear();
+                GroundList.Clear();
+                CardDic.Clear();
+                AttackCard.Clear();
+                game = true;
+                gameover = 0;
+                c = 0;
+                trun = 0;
+                Game();
+            }
         }
         public static void ComAI(Player players)
         {
             if (players.HandList.Count != 0)
             {
-                Console.WriteLine($"Attackcount : {attackcount}");
-                Console.WriteLine($"바닥의 카드 = 문양:{code} 번호:{codNum}");
-                Console.WriteLine("사용할 카드를 정해주세요.");
+                Console.SetCursorPosition(66, 11);
+                Console.WriteLine($"Attackcount : {attackcount}         ");
                 if (attackcount > 1)
                 {
                     for (int i = 0; i < players.HandList.Count + 1; i++)
@@ -440,12 +497,12 @@ namespace _4WeekHome
                             players.UseCard(i);
                             break;
                         }
-                        else if (codNum == 1 && code != "♠" && not2.Contains(players.HandList[i]))
+                        else if (codNum == 1 && code != "spade" && not2.Contains(players.HandList[i]))
                         {
                             players.UseCard(i);
                             break;
                         }
-                        else if ((codNum == 1 || GroundList[0] == "☆") && not3.Contains(players.HandList[i]))
+                        else if ((codNum == 1 || GroundList[0] == "blackjoker") && not3.Contains(players.HandList[i]))
                         {
                             players.UseCard(i);
                             break;
@@ -462,7 +519,7 @@ namespace _4WeekHome
                             break;
                         }
                         else if (players.HandList[i].Contains(code) || CardDic[players.HandList[i]] % 13 == codNum ||
-                            players.HandList[i] == "☆" || players.HandList[i] == "★" || code == "★")
+                            players.HandList[i] == "blackjoker" || players.HandList[i] == "joker" || code == "joker")
                         {
                             players.UseCard(i);
                             if (game == false)
@@ -471,23 +528,30 @@ namespace _4WeekHome
                             }
                             if (codNum == 7)
                             {
+                                Console.SetCursorPosition(36, 16);
+                                Console.Write("문양 변환");
+                                Thread.Sleep(2000);
+                                Console.SetCursorPosition(36, 16);
+                                Console.Write("          ");
                                 Random dom = new Random();
                                 int ii7 = dom.Next(0, 4);
                                 switch (ii7)
                                 {
                                     case 0:
-                                        code = "♥";
+                                        code = "heart";
                                         break;
                                     case 1:
-                                        code = "♣";
+                                        code = "clover";
                                         break;
                                     case 2:
-                                        code = "♦";
+                                        code = "diamond";
                                         break;
                                     case 3:
-                                        code = "♠";
+                                        code = "spade";
                                         break;
                                 }
+                                Console.SetCursorPosition(36, 17);
+                                Console.WriteLine($"  | {code} | | {codNum} |     ");
                             }
                             break;
                         }
@@ -506,7 +570,7 @@ namespace _4WeekHome
                 {
                     Console.SetCursorPosition(66, 35);
                     Console.Write("Player");
-                    if (Trun[i + 1] == 1 && Trun[i + 2] == 2)
+                    if (Trun[(i + 1) % 4] == 1 && Trun[(i + 2) % 4] == 2)
                     {
                         Console.SetCursorPosition(0, 17);
                         Console.Write("Com1");
@@ -515,7 +579,7 @@ namespace _4WeekHome
                         Console.SetCursorPosition(132, 17);
                         Console.Write("Com3");
                     }
-                    else if(Trun[i + 1] == 1 && Trun[i + 2] == 3)
+                    else if(Trun[(i + 1) % 4] == 1 && Trun[(i + 2) % 4] == 3)
                     {
                         Console.SetCursorPosition(0, 17);
                         Console.Write("Com1");
@@ -524,7 +588,7 @@ namespace _4WeekHome
                         Console.SetCursorPosition(132, 17);
                         Console.Write("Com2");
                     }
-                    else if(Trun[i + 1] == 2 && Trun[i + 2] == 1)
+                    else if(Trun[(i + 1) % 4] == 2 && Trun[(i + 2) % 4] == 1)
                     {
                         Console.SetCursorPosition(0, 17);
                         Console.Write("Com2");
@@ -533,7 +597,7 @@ namespace _4WeekHome
                         Console.SetCursorPosition(132, 17);
                         Console.Write("Com3");
                     }
-                    else if (Trun[i + 1] == 2 && Trun[i + 2] == 3)
+                    else if (Trun[(i + 1) % 4] == 2 && Trun[(i + 2) % 4] == 3)
                     {
                         Console.SetCursorPosition(0, 17);
                         Console.Write("Com2");
@@ -542,7 +606,7 @@ namespace _4WeekHome
                         Console.SetCursorPosition(132, 17);
                         Console.Write("Com1");
                     }
-                    else if (Trun[i + 1] == 3 && Trun[i + 2] == 1)
+                    else if (Trun[(i + 1) % 4] == 3 && Trun[(i + 2) % 4] == 1)
                     {
                         Console.SetCursorPosition(0, 17);
                         Console.Write("Com3");
@@ -567,37 +631,37 @@ namespace _4WeekHome
         {
             for (int i = 0; i < 13; i++)
             {
-                Cardlist.Add("♥" + Convert.ToString(i + 1));
-                CardDic.Add("♥" + Convert.ToString(i + 1), i + 1);
+                Cardlist.Add("heart" + Convert.ToString(i + 1));
+                CardDic.Add("heart" + Convert.ToString(i + 1), i + 1);
             }
             for (int i = 0; i < 13; i++)
             {
-                Cardlist.Add("♣" + Convert.ToString(i + 1));
-                CardDic.Add("♣" + Convert.ToString(i + 1), i + 1 + 13);
+                Cardlist.Add("clover" + Convert.ToString(i + 1));
+                CardDic.Add("clover" + Convert.ToString(i + 1), i + 1 + 13);
             }
             for (int i = 0; i < 13; i++)
             {
-                Cardlist.Add("♦" + Convert.ToString(i + 1));
-                CardDic.Add("♦" + Convert.ToString(i + 1), i + 1 + (13 * 2));
+                Cardlist.Add("diamond" + Convert.ToString(i + 1));
+                CardDic.Add("diamond" + Convert.ToString(i + 1), i + 1 + (13 * 2));
             }
             for (int i = 0; i < 13; i++)
             {
-                Cardlist.Add("♠" + Convert.ToString(i + 1));
-                CardDic.Add("♠" + Convert.ToString(i + 1), i + 1 + (13 * 3));
+                Cardlist.Add("spade" + Convert.ToString(i + 1));
+                CardDic.Add("spade" + Convert.ToString(i + 1), i + 1 + (13 * 3));
             }
-            Cardlist.Add("☆");
-            CardDic.Add("☆", 53);
-            Cardlist.Add("★");
-            CardDic.Add("★", 54);
+            Cardlist.Add("blackjoker");
+            CardDic.Add("blackjoker", 53);
+            Cardlist.Add("joker");
+            CardDic.Add("joker", 54);
             for(int i = 0; i < 2; i++)
             {
-                AttackCard.Add("♥" + Convert.ToString(i + 1));
-                AttackCard.Add("♣" + Convert.ToString(i + 1));
-                AttackCard.Add("♦" + Convert.ToString(i + 1));
-                AttackCard.Add("♠" + Convert.ToString(i + 1));
+                AttackCard.Add("heart" + Convert.ToString(i + 1));
+                AttackCard.Add("clover" + Convert.ToString(i + 1));
+                AttackCard.Add("diamond" + Convert.ToString(i + 1));
+                AttackCard.Add("spade" + Convert.ToString(i + 1));
             }
-            AttackCard.Add("★");
-            AttackCard.Add("☆");
+            AttackCard.Add("joker");
+            AttackCard.Add("blackjoker");
 
         }
         public static void EndlessCard()
@@ -619,38 +683,42 @@ namespace _4WeekHome
         public static void ShowGround()
         {
             #region code
-            if (GroundList[0].Contains("♥"))
+            if (GroundList[0].Contains("heart"))
             {
-                code = "♥";
+                code = "heart";
             }
-            else if (GroundList[0].Contains("♣"))
+            else if (GroundList[0].Contains("clover"))
             {
-                code = "♣";
+                code = "clover";
             }
-            else if (GroundList[0].Contains("♦"))
+            else if (GroundList[0].Contains("diamond"))
             {
-                code = "♦";
+                code = "diamond";
             }
-            else if (GroundList[0].Contains("♠"))
+            else if (GroundList[0].Contains("spade"))
             {
-                code = "♠";
+                code = "spade";
             }
             else
             {
-                code = "★";
+                code = "joker";
             }
             #endregion
             #region codNum
-            if (code == "★")
+            if (code == "joker")
             {
                 codNum = 99;
+            }
+            else if(CardDic[GroundList[0]] % 13 == 0)
+            {
+                codNum = 13;
             }
             else
             {
                 codNum = CardDic[GroundList[0]] % 13;
             }
             Console.SetCursorPosition(36, 17);
-            Console.WriteLine($"| {code} | | {codNum} |     ");
+            Console.WriteLine($"  | {code} | | {codNum} |     ");
             #endregion
         }
     }
@@ -679,14 +747,13 @@ namespace _4WeekHome
                 Cardlist.RemoveAt(a);
                 attackcount = 1;
             }
-            Console.WriteLine("카드를 얻습니다.");
-            Console.WriteLine("");
             if (HandList.Count >= 20)
             {
                 for (int i = 0; i < HandList.Count; i++)
                 {
                     Cardlist.Add(HandList[i]);
                 }
+                HandList.Clear();
                 Console.WriteLine("패배하였습니다.");
                 gameover++;
             }
@@ -694,12 +761,17 @@ namespace _4WeekHome
         public void UseCard(int Value)
         {
             GroundList.Insert(0, HandList[Value]);
-            Console.WriteLine("놓여진 카드 : " + GroundList[0]);
+            HandList.RemoveAt(Value);
+            ShowGround();
             if (CardDic[GroundList[0]] % 13 == 11)
             {
                 trun++;
                 trun = trun % 4;
-                Console.WriteLine("건너뛰기");
+                Console.SetCursorPosition(66, 32);
+                Console.Write("건너뛰기");
+                Thread.Sleep(700);
+                Console.SetCursorPosition(66, 32);
+                Console.Write("         ");
             }
             if(CardDic[GroundList[0]] % 13 == 12)
             {
@@ -717,19 +789,18 @@ namespace _4WeekHome
                 int T1 = Trun[tt];
                 Trun[t] = T1;
                 Trun[tt] = T;
-                Console.WriteLine("방향전환");
-                for (int i = 0; i < 4; i++)
-                {
-                    Console.WriteLine($"{Trun[i]}");
-                }
+                Console.SetCursorPosition(66, 32);
+                Console.Write("방향전환");
+                Thread.Sleep(700);
+                Console.SetCursorPosition(66, 32);
+                Console.Write("         ");
             }
-            if (CardDic[GroundList[0]] % 13 == 0)
+            if (codNum==13)
             {
                 trun--;
                 trun = trun % 4;
             }
-            HandList.RemoveAt(Value);
-            ShowGround();
+            
             if (AttackCard.Contains(GroundList[0]))
             {
                 if (attackcount == 1)
@@ -740,11 +811,11 @@ namespace _4WeekHome
                 {
                     attackcount += 2;
                 }
-                else if (code== "♠" || GroundList[0].Contains("☆"))
+                else if (code== "spade" || GroundList[0].Contains("blackjoker"))
                 {
                     attackcount += 5;
                 }
-                else if(GroundList[0].Contains("★"))
+                else if(GroundList[0].Contains("joker"))
                 {
                     attackcount += 10;
                 }
@@ -761,36 +832,31 @@ namespace _4WeekHome
         }
         public void ShowMyHand(int c)
         {
-            Console.SetCursorPosition(20, 38);
-            for (int i = 0; i < c; i++)
+            if (HandList.Count != 0)
             {
-                Console.Write(" ");
-            }
-            Console.Write("________");
-            for(int i = c + 1; i < HandList.Count; i++)
-            {
-                Console.Write(" ");
-            }
-            Console.SetCursorPosition(20, 39);
-            for (int i = 0; i < c; i++)
-            {
-                Console.Write("|");
-            }
-            Console.Write("        ");
-            for (int i = c + 1; i < HandList.Count; i++)
-            {
-                Console.Write(" ");
-            }
-            Console.Write("        ");
-            Console.SetCursorPosition(20, 40);
-            for (int i = 0; i < c; i++)
-            {
-                Console.Write("|");
-            }
-            Console.Write($"{HandList[c]}");
-            for (int i = c + 1; i < HandList.Count; i++)
-            {
-                Console.Write("|");
+                Console.SetCursorPosition(20, 38);
+                for (int i = 0; i < c; i++)
+                {
+                    Console.Write($" {HandList[i]} ");
+                    if (i == 10)
+                    {
+                        Console.SetCursorPosition(20, 39);
+                    }
+                }
+                if (c == 11)
+                {
+                    Console.SetCursorPosition(20, 39);
+                }
+                Console.Write($" [{HandList[c]}] ");
+                for (int i = c + 1; i < HandList.Count; i++)
+                {
+                    Console.Write($" {HandList[i]}  ");
+                    if (i == 10)
+                    {
+                        Console.SetCursorPosition(20, 39);
+                    }
+                }
+                Console.Write("             ");
             }
         }
     }
